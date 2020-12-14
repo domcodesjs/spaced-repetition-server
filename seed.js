@@ -9,6 +9,7 @@ const db = knex({
 
 const seedDatabase = async () => {
   try {
+    await db.raw(`TRUNCATE "word", "language", "user";`);
     await db('user').insert([
       {
         id: 1,
