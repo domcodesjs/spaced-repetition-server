@@ -1,11 +1,4 @@
-require('dotenv').config();
-const knex = require('knex');
-const { DB_URL } = require('./src/config');
-
-const db = knex({
-  client: 'pg',
-  connection: DB_URL
-});
+const db = require('./knex/knex');
 
 const seedDatabase = async () => {
   try {
