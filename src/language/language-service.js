@@ -1,8 +1,8 @@
 const db = require('../../knex/knex');
 
 const LanguageService = {
-  getUsersLanguage(user_id) {
-    return db
+  async getUsersLanguage(user_id) {
+    return await db
       .from('language')
       .select(
         'language.id',
@@ -14,9 +14,8 @@ const LanguageService = {
       .where('language.user_id', user_id)
       .first();
   },
-
-  getLanguageWords(language_id) {
-    return db
+  async getLanguageWords(language_id) {
+    return await db
       .from('word')
       .select(
         'id',
@@ -29,6 +28,15 @@ const LanguageService = {
         'incorrect_count'
       )
       .where({ language_id });
+  },
+  async getHeadWord(headId) {
+    return await db('word').select('*').where('id', headId);
+  },
+  async updateLanguage(user_id, newLanguageFields) {
+    return await db('language').where({ user_id }).update(newLanguageFields);
+  },
+  async updateWord(word_id, newWordFields) {
+    return await db('word').where('id', word_id).update(newWordFields);
   }
 };
 

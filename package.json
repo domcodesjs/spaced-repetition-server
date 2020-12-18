@@ -4,10 +4,11 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "test": "mocha --require test/setup.js",
-    "dev": "nodemon src/server.js",
-    "migrate": "postgrator --config postgrator-config.js",
-    "start": "node src/server.js",
+    "test": "NODE_ENV=test mocha --require test/setup.js",
+    "dev": "NODE_ENV=development nodemon src/server.js",
+    "migrate:dev": "NODE_ENV=development postgrator --config postgrator-config.js",
+    "migrate:test": "NODE_ENV=test postgrator --config postgrator-config.js",
+    "start": "NODE_ENV=production node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
     "seed": "node seed.js"
