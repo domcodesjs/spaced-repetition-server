@@ -11,7 +11,7 @@
     "start": "NODE_ENV=production node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
-    "seed": "node seed.js"
+    "seed": "NODE_ENV=development node seed.js"
   },
   "keywords": [],
   "author": "",
