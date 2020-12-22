@@ -40,13 +40,12 @@ router.get('/head', async (req, res, next) => {
   try {
     const head = await LanguageService.getHeadWord(req.language.id);
 
-    res.json({
+    return res.json({
       nextWord: head[0].original,
       totalScore: req.language.total_score,
       wordCorrectCount: head[0].correct_count,
       wordIncorrectCount: head[0].incorrect_count
     });
-    next();
   } catch (error) {
     next(error);
   }
