@@ -14,7 +14,7 @@ const seedDatabase = async () => {
     await db('language').insert([
       {
         id: 1,
-        name: 'French',
+        name: 'Japanese',
         user_id: 1
       }
     ]);
@@ -22,57 +22,57 @@ const seedDatabase = async () => {
       {
         id: 1,
         language_id: 1,
-        original: 'entraine toi',
-        translation: 'practice',
+        original: 'はい',
+        translation: 'yes',
         next: 2
       },
       {
         id: 2,
         language_id: 1,
-        original: 'bonjour',
-        translation: 'hello',
+        original: 'ありがとう',
+        translation: 'thank you',
         next: 3
       },
       {
         id: 3,
         language_id: 1,
-        original: 'maison',
-        translation: 'house',
+        original: 'どういたしまして',
+        translation: "you're welcome",
         next: 4
       },
       {
         id: 4,
         language_id: 1,
-        original: 'développeur',
-        translation: 'developer',
+        original: 'すみません',
+        translation: 'excuse me',
         next: 5
       },
       {
         id: 5,
         language_id: 1,
-        original: 'traduire',
-        translation: 'translate',
+        original: 'おはようございます',
+        translation: 'good morning',
         next: 6
       },
       {
         id: 6,
         language_id: 1,
-        original: 'incroyable',
-        translation: 'amazing',
+        original: 'こんにちは',
+        translation: 'hello',
         next: 7
       },
       {
         id: 7,
         language_id: 1,
-        original: 'chien',
-        translation: 'dog',
+        original: 'おやすみなさい',
+        translation: 'good night',
         next: 8
       },
       {
         id: 8,
         language_id: 1,
-        original: 'chat',
-        translation: 'cat',
+        original: 'はい',
+        translation: 'yes',
         next: null
       }
     ]);
