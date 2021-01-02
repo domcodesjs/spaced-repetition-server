@@ -91,3 +91,6 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+try {
+} catch (err) {}
