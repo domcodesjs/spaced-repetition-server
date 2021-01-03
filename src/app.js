@@ -18,6 +18,9 @@ app.use(
 app.use(cors());
 app.use(helmet());
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Spaced Repetition Server' });
+});
 app.use('/api/auth', authRouter);
 app.use('/api/language', languageRouter);
 app.use('/api/user', userRouter);
