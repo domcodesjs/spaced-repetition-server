@@ -15,7 +15,7 @@
     "deploy": "git push heroku master",
     "seed:dev": "NODE_ENV=development node seed.js",
     "seed:test": "NODE_ENV=test node seed.js",
-    "seed:production": "NODE_ENV=production node seed.js",
+    "seed:production": "NODE_ENV=production node seedher.js",
     "seed:heroku": "heroku run npm run seed:production"
   },
   "keywords": [],
@@ -31,13 +31,13 @@
     "knex": "^0.21.13",
     "knex-cleaner": "^1.3.1",
     "morgan": "^1.10.0",
-    "pg": "^8.5.1"
+    "pg": "^8.5.1",
+    "postgrator-cli": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
-    "postgrator-cli": "^4.0.0",
     "supertest": "^6.0.1"
   }
 }
