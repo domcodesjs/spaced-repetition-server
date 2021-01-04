@@ -8,7 +8,7 @@
     "dev": "NODE_ENV=development nodemon src/server.js",
     "migrate:dev": "NODE_ENV=development postgrator --config postgrator-config.js",
     "migrate:test": "NODE_ENV=test postgrator --config postgrator-config.js",
-    "migrate:production": "NODE_ENV=production postgrator --config postgrator-config.js",
+    "migrate:production": "postgrator --config postgrator-config.js",
     "migrate:heroku": "heroku run npm run migrate:production",
     "start": "NODE_ENV=production node src/server.js",
     "predeploy": "npm audit",
