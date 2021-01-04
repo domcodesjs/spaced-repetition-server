@@ -15,7 +15,7 @@
     "deploy": "git push heroku master",
     "seed:dev": "NODE_ENV=development node seed.js",
     "seed:test": "NODE_ENV=test node seed.js",
-    "seed:production": "NODE_ENV=production node seedher.js",
+    "seed:production": "NODE_ENV=production node seed.js",
     "seed:heroku": "heroku run npm run seed:production"
   },
   "keywords": [],
